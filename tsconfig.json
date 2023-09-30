@@ -1,0 +1,26 @@
+{
+  "ts-node": {
+    "swc": true
+  },
+
+  "compilerOptions": {
+    "outDir": "src",
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "module": "CommonJS",
+    "lib": ["ESNext", "DOM"],
+    "moduleResolution": "Node",
+    "strict": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "noEmit": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "skipLibCheck": true,
+    "allowJs": true
+  },
+
+  "files" : ["src/event-handler.ts"],
+}
