@@ -1,6 +1,6 @@
 import { vec2 } from "gl-matrix";
 
-export interface event_data {
+interface event_data {
     type: string;
     state: string | boolean;
     type_meta: string;
@@ -108,7 +108,7 @@ const event_cursor = (cb:Function, evt:Event) => {
 }
 
 
-export const event_keyboard = (cb:Function, evt:KeyboardEvent) => {
+const event_keyboard = (cb:Function, evt:KeyboardEvent) => {
 
     if(evt.type === 'keydown'){
         evt.preventDefault();
@@ -125,7 +125,7 @@ export const event_keyboard = (cb:Function, evt:KeyboardEvent) => {
 }
 
 
-export const event_screen = (type:string, target:Element, callback:Function, has_interval:boolean = false):void => {
+const event_screen = (type:string, target:Element, callback:Function, has_interval:boolean = false):void => {
     if(type === 'cursor'){
         target.addEventListener('mouseup', (evt) => {event_cursor(callback, evt)}, false);
         target.addEventListener('mouseleave', (evt) => {event_cursor(callback, evt)}, false);
@@ -147,3 +147,5 @@ export const event_screen = (type:string, target:Element, callback:Function, has
     }
 }
 
+// export interface event_data;
+export {event_screen, event_keyboard, type event_data}

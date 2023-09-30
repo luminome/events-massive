@@ -5,7 +5,7 @@
   "main": "src/event-handler.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon tests/service.js -w src",
+    "dev": "nodemon tests/server/service.js --config tests/nodemon.json",
     "build": "tsc src/event-handler.ts",
     "postinstall": "tsc src/event-handler.ts && echo \"events-massive js built\""
   },
